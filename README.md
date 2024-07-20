@@ -1,5 +1,7 @@
 # web
 
+## node建议版本：14.18.3
+
 ## Project setup
 ```
 yarn install

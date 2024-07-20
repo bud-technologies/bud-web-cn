@@ -1,0 +1,409 @@
+// home pc
+
+.blocks {
+  @include flex(flex, space-between, flex-start);
+
+  .content .block-subtitle + .inner {
+    margin-top: 0.3rem;
+
+    @media screen and (max-width: $screen-xl-max) {
+      margin-top: responsive(20);
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    display: block;
+  }
+}
+
+.main-container { background-color: #030303; }
+
+// banner-container
+.banner-container {
+  @include full-screen-visuel-container();
+
+  .video-container {
+    position: absolute;
+    @include position-center;
+    @include square(100%);
+    @include translate-center;
+    opacity: 0.5;
+
+    .poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      @include square(100%);
+      object-fit: cover;
+
+      &[lazy=loaded] {
+        -webkit-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+      }
+    }
+    &.play .poster { visibility: hidden; }
+
+    .video-wrapper {
+      position: absolute;
+      @include position-equal(0);
+  
+      video {
+        display: block;
+        @include square(100%);
+        object-fit: cover;
+      }
+    }
+  }
+
+  .banner-inner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+    @include transform(#{ translateY(-50%) });
+
+    .container > * + * { margin-top: 0.4rem; }
+
+    .slogan { @include slogan(); }
+
+    .content {
+      font-size: 0.2rem;
+      line-height: 1.8;
+      color: #fff;
+    }
+
+    @media screen and (max-width: $screen-xl-max) {
+      .container > * + * { margin-top: responsive(28); }
+
+      .content {
+        font-size: responsive(16);
+        line-height: (26 / 16);
+        color: #fff;
+      }
+    }
+  }
+
+  .banner-footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 5%;
+    z-index: 10;
+    text-align: center;
+    @include transform(#{ translateY(-50%) });
+
+    .container > * + * { margin-top: 0.4rem; }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem; // 按钮之间的间距
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      padding: 0.08rem 0.25rem;
+      font-size: 0.2rem;
+      font-weight: 500;
+      color: #fff;
+      background-color: #101A1C;
+      border: none;
+      border-radius: 0.05rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      .icon {
+        margin-right: 0.1rem; // 图标和文字之间的间距
+        width: 0.45rem; // 根据需要调整图标大小
+        height: auto;
+      }
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+    
+
+    @media screen and (max-width: $screen-xl-max) {
+      .container > * + * { margin-top: responsive(28); }
+
+      .content {
+        font-size: responsive(16);
+        line-height: (26 / 16);
+        color: #fff;
+      }
+    }
+  }
+
+  
+}
+
+// bud-club
+.bud-club {
+  .content { width: 44.1993%; }
+
+  .visuels {
+    width: 46.0784%;
+
+    ul {
+      @include flex(flex, space-between, flex-start);
+      flex-wrap: wrap;
+
+      li {
+        margin-top: 0.22rem;
+        width: calc(50% - 0.11rem);
+
+        &:nth-child(1),
+        &:nth-child(2) { margin-top: 0; }
+
+        &:before { padding-top: 66.6666%; }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-xl-max) {
+    // .content { width: 42.7064%; }
+    .content { width: 42.2065%; }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    .content,
+    .visuels { width: 100%; }
+
+    .visuels { margin-top: 0.3rem; }
+  }
+}
+
+// team
+.team {
+  .block-subtitle,
+  .container > p { text-align: center; }
+
+  .container > p { margin-top: 0.2rem; }
+
+  .team-logos {
+    @include flex-center;
+    flex-wrap: wrap;
+
+    img {
+      margin: 0.2rem 0.16rem 0;
+      height: 0.32rem;
+    }
+  }
+
+  .visuel-single {
+    margin-top: 0.26rem;
+    margin-right: -0.02rem;
+    margin-left: -0.02rem;
+
+    &:before { padding-top: 37.4287%; }
+
+    .btn-learn-more {
+      position: absolute;
+      bottom: 0.4rem;
+      left: 50%;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.6);
+      @include transform(#{ translateX(-50%) });
+    }
+  }
+
+  @media screen and (max-width: $screen-xl-max) {
+    .container > p,
+    .team-logos img { margin-top: responsive(16); }
+
+    .visuel-single { margin-top: responsive(21); }
+  }
+}
+
+// investors
+.investors {
+  .blocks {
+    .content { width: 48.5295%; }
+
+    .visuel-single {
+      width: 40.5228%;
+
+      &:before { padding-top: 57.6612%; }
+    }
+  }
+
+  @media screen and (max-width: $screen-xl-max) {
+    .blocks .content { width: 50.8097%; }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    .blocks {
+      .content,
+      .visuel-single { width: 100%; }
+
+      .visuel-single { margin-top: 0.3rem; }
+    }
+  }
+
+  .investor-logos {
+    @include flex();
+    flex-wrap: wrap;
+    margin-top: 0.82rem;
+
+    img {
+      margin-right: 11.5196%;
+      width: 25.6536%;
+
+      &:nth-child(3n) { margin-right: 0; }
+    }
+  }
+}
+
+// news
+.news {
+  .block-news {
+    @include flex();
+
+    .block-subtitle {
+      margin-top: -0.05rem;
+      width: 2.17rem;
+
+      .windows & { width: 2.21rem; }
+
+      h2 { white-space: nowrap; }
+    }
+
+    .news-list {
+      flex-grow: 1;
+      width: 50%;
+
+      a {
+        @include flex(flex, space-between, flex-start);
+
+        & + a { margin-top: 0.48rem; }
+
+        .visuel-single {
+          @include size(2.4rem, 1.6rem);
+
+          &:before { display: none; }
+        }
+
+        .details {
+          border-bottom: 1px solid #464646;
+          width: calc(100% - 3.11rem);
+          height: 1.6rem;
+
+          .title {
+            max-height: 0.72rem;
+            font-size: 0.24rem;
+            font-weight: 500;
+            line-height: 0.36rem;
+            @include text-overflow(2);
+            color: #fff;
+
+            .placeholder { @include text-overflow(2); }
+
+            .text {
+              font-size: 0.96rem;
+              line-height: 1.44rem;
+              @include text-overflow(2);
+            }
+          }
+
+          .info {
+            margin-top: 0.24rem;
+            @include news-info;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $screen-xl-max) {
+      .block-subtitle {
+        margin-top: 0rem;
+        width: responsive(169);
+
+        h2 { @include transform(#{ translateY(responsive(-2)) }); }
+      }
+
+      .news-list {
+        a {
+          & + a { margin-top: responsive(32); }
+
+          .visuel-single { @include size(responsive(190), responsive(127)); }
+
+          .details {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            width: calc(100% - responsive(240));
+            height: responsive(127);
+
+            .title {
+              max-height: responsive(56);
+              font-size: responsive(16);
+              line-height: responsive(28);
+
+              .text {
+                font-size: responsive(64);
+                line-height: responsive(112);
+              }
+            }
+
+            .info { margin-top: responsive(20); }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      display: block;
+
+      .block-subtitle {
+        padding-right: 0;
+
+        h2 { @include transform(#{ translateY(0) }); }
+      }
+
+      .news-list {
+        margin-top: responsive(32);
+        width: 100%;
+
+        a .details { width: calc(100% - 2.82rem); }
+      }
+    }
+  }
+
+  .btn-center {
+    position: relative;
+    margin-top: 0.48rem;
+    height: 0.4rem;
+
+    .view-more {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      min-width: 1.12rem;
+      @include transform(#{ translateX(-50%) });
+    }
+  }
+
+  .btn-center .placeholder {
+    margin: 0 auto;
+    width: 1.12rem;
+    height: 0.4rem;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: $screen-xl-max) {
+    .btn-center {
+      margin-top: responsive(54);
+      height: responsive(28);
+
+      .view-more { min-width: responsive(126); }
+    }
+
+    .btn-center .placeholder {
+      width: responsive(126);
+      height: responsive(28);
+    }
+  }
+}

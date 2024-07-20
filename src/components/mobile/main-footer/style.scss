@@ -1,0 +1,205 @@
+// main-footer mobile
+
+.footer {
+  padding: 0.4rem 0 ;
+  background-color: #fff;
+
+  .footer-links {
+    p {
+      text-align: center;
+
+      & + p { margin-top: 0.56rem; }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      font-size: 0.24rem;
+      line-height: 0.36rem;
+      white-space: nowrap;
+      color: #6d6d6d;
+      @include transition(#{ color 0.15s ease-out });
+      cursor: pointer;
+
+      &:hover { color: rgba(255, 255, 255, 1); }
+    }
+
+    .qrcode {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 0.11rem;
+      margin-left: -0.6rem;
+      @include square(1.2rem);
+      opacity: 0;
+      @include transition(#{ opacity 0.15s ease-out, transform 0.15s ease-out });
+      @include transform(#{ translateY(-20px) });
+      pointer-events: none;
+
+      &.show {
+        opacity: 1;
+        @include transform(#{ translateY(0px) });
+        pointer-events: all;
+      }
+
+      img {
+        display: block;
+        border-radius: 0.12rem;
+        width: 100%;
+      }
+    }
+
+    .email-bubble {
+      visibility: hidden;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 0.36rem;
+      padding: 0 0.2rem;
+      text-align: center;
+      opacity: 0;
+      @include transition(#{ all 0.15s ease-out });
+      @include transform(#{ translate(-50%, -20px) });
+      cursor: auto;
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+        @include transform(#{ translate(-50%, 0) });
+      }
+
+      span {
+        position: absolute;
+        @include position-equal(0);
+        border-radius: 0.12rem;
+        background-color: #fff;
+
+        &:before {
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          margin-left: -4px;
+          @include square(8px);
+          background-color: #fff;
+          @include transform(#{ rotate(45deg) });
+          content: "";
+          pointer-events: none;
+        }
+      }
+
+      i {
+        display: block;
+        position: relative;
+        font-family: "jost-500";
+        font-size: 0.32rem;
+        line-height: 2;
+        white-space: nowrap;
+        color: #000;
+      }
+
+      .copied {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 100%;
+        margin-left: 0.1rem;
+        font-family: "jost-400";
+        font-size: 0.28rem;
+        line-height: 0.38rem;
+        color: rgba(255, 255, 255, 0.5);
+        pointer-events: none;
+      }
+    }
+  }
+
+  .socials {
+    @include flex(flex, center, flex-start);
+    flex-wrap: wrap;
+    margin-top: 0.66rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 4.4rem;
+
+    & > * {
+      position: relative;
+      // margin: 0 0.38rem 0.4rem;
+      margin: 0 0.15rem 0.4rem;
+      @include square(0.8rem);
+
+      & > img {
+        display: block;
+        @include square(0.8rem);
+        opacity: 0.4;
+        @include transition(#{ opacity 0.15s ease-out });
+      }
+      &:hover > img { opacity: 1; }
+
+      .qrcode {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-bottom: 8px;
+        margin-left: -0.68rem;
+        @include square(1.36rem);
+        opacity: 0;
+        @include transition(#{ opacity 0.15s ease-out, transform 0.15s ease-out });
+        @include transform(#{ translateY(-20px) });
+        pointer-events: none;
+  
+        &.show {
+          opacity: 1;
+          @include transform(#{ translateY(0px) });
+          pointer-events: all;
+        }
+  
+        img {
+          display: block;
+          border-radius: 0.12rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.23rem;
+
+    line-height: 0.32rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+
+    .icon-tab{
+      .logo-icon{
+        margin-right: 0.4rem;
+        width: 1.3rem;
+      }
+      .age-icon{
+        width: 0.4rem;
+        margin-bottom: 0.08rem;
+      }
+    }
+    .text-tab{
+      margin-top: 0.1rem;
+      .text{
+        color: rgba(0, 0, 0, 0.45);
+        font-weight: 400;
+      }
+      .links-tab{
+        margin: 0.2rem;
+        color: rgba(0, 0, 0, 0.45);
+         .link{
+           color: rgba(0, 0, 0, 0.45);
+           font-size: 0.25rem;
+           font-weight: 500;
+         }
+         .link-span{
+           display: inline;
+           margin: 0 0.2rem;
+         }  
+       }
+       .tip{
+        color:rgba(0, 0, 0, 0.3)
+       }
+    }
+  }
+}

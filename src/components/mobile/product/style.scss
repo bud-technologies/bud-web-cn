@@ -1,0 +1,131 @@
+// product mobile
+
+.block-subtitle + * { @include block-subtitle-margin; }
+
+// banner-container
+.banner-container {
+  @include banner-container-mobile;
+
+  .swiper-container {
+    position: absolute;
+    @include position-equal(0);
+    opacity: 0.4;
+
+    .swiper-slide img {
+      display: block;
+      @include square(100%);
+      object-fit: cover;
+      @include transition(#{ transform 0.01s 0.5s ease-out });
+      @include transform(#{ scale(1.2) });
+    }
+    .swiper-slide-active img {
+      @include transition(#{ transform 2.8s 0s ease-out });
+      @include transform(#{ scale(1) });
+    }
+  }
+
+  .content {
+    position: absolute;
+    @include position-center;
+    z-index: 10;
+    min-width: 80%;
+    width: 6.66rem;
+    @include translate-center;
+
+    .slogan {
+      @include slogan();
+      text-align: center;
+    }
+  }
+}
+
+// experience
+.experience {
+  .visuels {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 0.1rem;
+
+    li {
+      margin-top: 0.3rem;
+      width: calc(50% - 0.15rem);
+    }
+  }
+}
+
+// creation-tool
+.creation-tool {
+  .text {
+    p {
+      & + p { margin-top: 0.52rem; }
+    }
+  }
+
+  .visuel-single {
+    margin-top: 0.4rem;
+    border-radius: 0;
+    background: none;
+
+    &:before { padding-top: 51.6516%; }
+  }
+}
+
+// props
+.props {
+  .visuel-single {
+    margin-top: 0.4rem;
+    background: none;
+
+    &:before { padding-top: 73.8738%; }
+  }
+}
+
+// avatar-clothing
+.avatar-clothing {
+  .wrapper {
+    position: relative;
+    margin-top: 0.4rem;
+    padding-top: 3.47rem;
+    height: 5.98rem;
+
+    .swiper-container {
+      margin: 0 -0.42rem;
+      height: 1.5rem;
+
+      .swiper-slide {
+        width: 1.5rem;
+        opacity: 0.5;
+
+        img {
+          display: block;
+          @include square(100%);
+        }
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, #000000 100%);
+        content: "";
+        pointer-events: none;
+      }
+    }
+
+    .visuel-single {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 50;
+      margin-left: -1.38rem;
+      width: 2.76rem;
+
+      &:before { padding-top: 216.6666%;; }
+    }
+  }
+}

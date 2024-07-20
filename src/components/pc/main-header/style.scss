@@ -1,0 +1,56 @@
+// main-header pc
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  background-color: rgba(3, 3, 3, 0);
+  @include transition(#{ background 0.15s ease-out });
+
+  .container {
+    @include flex(flex, space-between, center);
+    height: 0.84rem;
+    @include transition(#{ height 0.15s ease-out });
+  }
+
+  &.sticky {
+    background-color: rgba(3, 3, 3, 1);
+
+    .container { height: 0.6rem; }
+  }
+
+  .logo {
+    width: 0.32rem;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .navigation {
+    @include flex(inline-flex);
+
+    a {
+      position: relative;
+      font-size: 0.18rem;
+      font-weight: 500;
+      line-height: 2;
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.5);
+      @include transition(#{ color 0.15s ease-out });
+
+      & + a { margin-left: 0.48rem; }
+      &.active,
+      &:hover { color: rgba(255, 255, 255, 1); }
+
+      @media screen and (max-width: $screen-xl-max) {
+        font-size: responsive(14);
+
+        & + a { margin-left: responsive(38); }
+      }
+    }
+  }
+}

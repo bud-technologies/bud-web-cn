@@ -1,0 +1,284 @@
+body {
+  font-size: 0.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #d2d2d2;
+
+  @media screen and (max-width: $screen-xl-max) {
+    font-size: responsive(14);
+    line-height: (26 / 14);
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 0.28rem;
+    line-height: (52 / 28);
+  }
+}
+
+#app.windows { font-family: 'microsoft yahei', arial, 'hiragino sans gb', sans-serif; }
+#app.andriod { font-family:  Helvetica Neue,Hiragino Sans GB,Segoe UI,Microsoft YaHei,微软雅黑,sans-serif; }
+
+.template-page {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-container {
+  visibility: hidden;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  background-color: #000;
+  opacity: 0;
+  @include transition(#{ opacity 0.8s ease-out });
+
+  &.show {
+    visibility: visible;
+    min-height: 0;
+    opacity: 1;
+  }
+
+  & > section + section { margin-top: 2rem; }
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding-bottom: 0;
+
+    & > section {
+      & + section { margin-top: 1rem; }
+      &.banner-container + section { margin-top: 1rem; }
+
+      .container {
+        border-bottom: 0.03rem solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1rem;
+      }
+      &.banner-container .container {
+        border-bottom: 0 none;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding-laptop;
+  padding-left: $container-padding-laptop;
+  max-width: 1384px;
+  width: 80%;
+
+  @media screen and (max-width: $screen-lg-max) {
+    padding-right: $container-padding-tablet;
+    padding-left: $container-padding-tablet;
+    width: 85%;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding-right: 0;
+    padding-left: 0;
+    min-width: 80%;
+    width: 6.66rem;
+  }
+
+  @media screen and (max-width: $screen-xxs-max) {
+    padding-right: 0;
+    padding-left: 0;
+    min-width: 6.66rem;
+    width: 6.66rem;
+  }
+}
+
+// in-view
+.fade-in-up,
+.blocks-in-view > *:not(.static) { opacity: 0; }
+
+// visuel-single
+.visuel-single {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.12rem;
+  background-color: #0b0b0b;
+  @include transform(#{ translateZ(0) });
+  
+  &:before {
+    display: block;
+    padding-top: 100%;
+    content: "";
+  }
+
+  img {
+    position: absolute;
+    @include position-center;
+    z-index: 2;
+    width: 100%;
+    @include translate-center;
+  }
+
+  .loader {
+    z-index: 0;
+    opacity: 1;
+    @include transition(#{ opacity 0.5s ease-out });
+  }
+  img[lazy=loaded] + .loader { opacity: 0; }
+}
+
+// block-subtitle
+.block-subtitle h2 {
+  font-size: 0.42rem;
+  font-weight: 500;
+  line-height: (50 / 42);
+  color: #fff;
+
+  .windows &,
+  .andriod & { font-weight: 700; }
+
+  @media screen and (max-width: $screen-xl-max) {
+    font-size: responsive(30);
+    line-height: (32 / 30);
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 0.46rem;
+    line-height: (50 / 46);
+  }
+}
+
+// text-area
+.text-area {
+  position: relative;
+
+  .placeholder {
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    font-size: 0.8rem;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    @include transform(#{ scale(0.25) });
+
+    @media screen and (max-width: $screen-xl-max) {
+      font-size: responsive(56);
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: 1.12rem;
+    }
+  }
+}
+
+// view-more
+.view-more {
+  @include flex(flex, center, baseline);
+  box-sizing: content-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.12rem;
+  @include size(1.12rem, 0.4rem);
+
+  span {
+    font-size: 0.16rem;
+    line-height: (40 / 16);
+    color: #fff;
+    @include transition(#{ transform 0.15s ease-out });
+    @include transform(#{ translateX(6px) });
+  }
+
+  &:after {
+    margin-left: 8px;
+    @include size(4px, 10px);
+    @include bg-img("icon-arrow.svg");
+    @include transition(#{ all 0.15s ease-out });
+    opacity: 0;
+    @include transform(#{ translateX(18px) });
+    content: "";
+  }
+
+  &:hover {
+    span { @include transform(#{ translateX(0) }); }
+
+    &:after {
+      opacity: 1;
+      @include transform(#{ translateX(0) });
+    }
+  }
+
+  @media screen and (max-width: $screen-xl-max) {
+    @include size(responsive(126), responsive(34));
+
+    span {
+      font-size: responsive(14);
+      line-height: (34 / 14);
+    }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    border: 0.02rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.16rem;
+    @include size(1.68rem, 0.64rem);
+
+    span {
+      font-size: 0.26rem;
+      line-height: (64 / 26);
+    }
+  }
+}
+
+// lazyload
+img[lazy=loading] { opacity: 0; }
+img[lazy=loaded] {
+  opacity: 1;
+  @include transition(#{ opacity 0.5s ease-out });
+}
+
+// to-top
+.to-top {
+  position: fixed;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  z-index: 500;
+  cursor: pointer;
+
+  span {
+    display: block;
+    border: 1px solid #2e2e2e;
+    border-radius: 50%;
+    @include square(0.7rem);
+    @include bg-img("icon-top.svg");
+    background-color: #252525;
+    @include transition(#{ background-color 0.15s ease-out });
+  }
+  &:hover span { background-color: #323232; }
+
+  @media screen and (max-width: $screen-lg-max) {
+    bottom: 0.4rem;
+    right: 0.4rem;
+
+    span { @include square(0.6rem); }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    bottom: 0.3rem;
+    right: 0.3rem;
+
+    span { @include square(0.8rem); }
+  }
+}
+
+// fade transition
+.fade-enter-active,
+.fade-leave-active {
+  @include transition(#{ opacity 0.15s ease-out, transform 0.15s ease-out });
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  @include transform(#{ translateY(20px) });
+}

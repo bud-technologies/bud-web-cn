@@ -1,0 +1,262 @@
+// start Media queries breakpoints ---------------------------------------------
+$screen-xxs: 540px;
+$screen-xxs-min: $screen-xxs;
+$screen-xxs-max: $screen-xxs-min - 1;
+
+$screen-xs: 768px;
+$screen-xs-min: $screen-xs + 1;
+$screen-xs-max: $screen-xs;
+
+$screen-sm: 992px;
+$screen-sm-min: $screen-sm;
+$screen-sm-max: $screen-sm-min - 1;
+
+$screen-md: 1200px;
+$screen-md-min: $screen-md;
+$screen-md-max: $screen-md-min - 1;
+
+$screen-lg: 1460px;
+$screen-lg-min: $screen-lg;
+$screen-lg-max: $screen-lg-min - 1;
+
+$screen-xl: 1700px;
+$screen-xl-min: $screen-xl;
+$screen-xl-max: $screen-xl-min - 1;
+
+$screen-xxl: 1920px;
+$screen-xxl-min: $screen-xxl;
+$screen-xxl-max: $screen-xxl-min - 1;
+// end Media queries breakpoints ----------------------------------------------
+
+// Padding for ".container"
+$container-padding-phone: 0.42rem;
+$container-padding-tablet: 50px;
+$container-padding-laptop: 80px;
+
+// colors
+$bg-color: #030303;
+
+// Displaying flex
+@mixin flex($display: flex, $h-align: flex-start, $v-align: flex-start) {
+  display: $display;
+  justify-content: $h-align;
+  align-items: $v-align;
+}
+
+// Positioning shortcuts
+@mixin position ($top, $right, $bottom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-equal($pos) {
+  @include position($pos, $pos, $pos, $pos);
+}
+
+// Center layout
+@mixin flex-center($display: flex) {
+  @include flex($display, center, center);
+}
+
+@mixin position-center() {
+  top: 50%;
+  left: 50%;
+}
+
+@mixin translate-center() {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// text-overflow
+@mixin text-overflow($clamp: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $clamp;
+  text-overflow: ellipsis;
+}
+
+// Complement image url
+@function complete-img-url($img) {
+  @return "~@/assets/img/" + $img;
+}
+
+// Background image
+@mixin bg-img(
+  $img, 
+  $repeat: no-repeat, 
+  $position: center center, 
+  $size: 100% 100%,
+  $color: none
+) {
+  $img: complete-img-url($img);
+  background: url($img) $repeat $position / $size;
+  
+  @if ($color != "none") {
+    background-color: $color;
+  }
+}
+
+// Trainsition shortcuts
+@mixin transition($params) {
+  -webkit-transition: $params;
+          transition: $params;
+}
+
+// Transorm origin shortcuts
+@mixin transform-origin($params) {
+  -webkit-transform-origin: $params;
+          transform-origin: $params;
+}
+
+// Transform shortcuts
+@mixin transform($params) {
+  -webkit-transform: $params;
+          transform: $params;
+}
+
+// Animation shortcuts
+@mixin animation($params) {
+  -webkit-animation: $params;
+          animation: $params;
+}
+
+// full-screen-visuel-container
+@mixin full-screen-visuel-container() {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-color: #000;
+
+  .visuel {
+    position: absolute;
+    @include position-equal(0);
+
+    img {
+      display: block;
+      @include square(100%);
+      object-fit: cover;
+    }
+
+    &:after {
+      position: absolute;
+      @include position-equal(0);
+      background-color: rgba(0, 0, 0, 0.6);
+      content: "";
+    }
+  }
+}
+
+// banner-container-mobile
+@mixin banner-container-mobile() {
+  overflow: hidden;
+  position: relative;
+  height: 12.76rem;
+  background-color: #000;
+
+  .banner-visuel {
+    position: absolute;
+    @include position-equal(0);
+    opacity: 0.4;
+
+    img {
+      position: absolute;
+      @include position-center();
+      @include square(100%);
+      @include translate-center();
+      object-fit: cover;
+
+      &[lazy=loaded] {
+        -webkit-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+      }
+    }
+  }
+}
+
+// slogan
+@mixin slogan {
+  // font-family: PingFangSC-Semibold,Microsoft YaHei;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: (120 / 78);
+  color: #fff;
+
+  @media screen and (max-width: $screen-xl-max) {
+    font-size: responsive(52);
+    line-height: (77 / 52);
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 0.7rem;
+    line-height: (90 / 70);
+
+    .andriod & { font-weight: 700; }
+  }
+}
+
+// news-info
+@mixin news-info() {
+  overflow: hidden;
+  font-size: 0.16rem;
+  line-height: (36 / 16);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #a9a9a9;
+
+  i {
+    display: inline;
+    padding-right: 0.18rem;
+    font-style: normal;
+  }
+
+  @media screen and (max-width: $screen-xl-max) {
+    font-size: responsive(12);
+    line-height: (20 / 12);
+
+    i { padding-right: responsive(8); }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 0.18rem;
+    line-height: (36 / 18);
+    color: #9f9f9f;
+  }
+}
+
+// block-subtitle-margin
+@mixin block-subtitle-margin() {
+  margin-top: 0.4rem;
+
+  @media screen and (max-width: $screen-xl-max) {
+    margin-top: responsive(40);
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 0.4rem;
+  }
+}
+
+// hyphens
+@mixin hyphens() {
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+@function responsive($px){
+  @return ((1224 / 988) * $px / 100) * 1rem;
+};

@@ -1,0 +1,196 @@
+// about mobile
+
+.block-subtitle + * { @include block-subtitle-margin; }
+
+// banner-container
+.banner-container {
+  @include banner-container-mobile;
+  
+  .content {
+    position: absolute;
+    bottom: 0.73rem;
+    left: 50%;
+    min-width: 80%;
+    width: 6.66rem;
+    font-size: 0.28rem;
+    line-height: 0.52rem;
+    color: #fff;
+    @include transform(#{ translateX(-50%) });
+
+    span {
+      font-size: 0.6rem;
+      font-weight: 600;
+    }
+
+    .text-area {
+      .text {
+        font-size: 1.12rem;
+        line-height: 2.08rem;
+
+        span { font-size: 2.4rem; }
+      }
+    }
+  }
+}
+.andriod .banner-container .content span { font-weight: 700; }
+
+// mission
+.mission {
+  .list {
+    li {
+      position: relative;
+      
+      & + li { margin-top: 0.32rem; }
+
+      .visuel-single:before { padding-top: 54.6546%; }
+
+      .desc {
+        @include flex(flex, flex-start, flex-end);
+        overflow: hidden;
+        position: absolute;
+        @include position-equal(0);
+        border-radius: 0.12rem;
+        padding: 0.26rem 0.24rem;
+        font-size: 0.3rem;
+        font-weight: 500;
+        line-height: (50 / 30);
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+// founder
+.founder {
+  .members .item {
+    & + .item { margin-top: 0.64rem; }
+
+    .headline {
+      @include flex(flex, space-between, center);
+
+      .founder-avatar {
+        overflow: hidden;
+        @include square(1.92rem);
+        border-radius: 50%;
+
+        img {
+          display: block;
+          @include square(100%);
+        }
+      }
+
+      .info {
+        width: calc(100% - 2.16rem);
+
+        .founder-name {
+          font-family: "jost-600";
+          font-size: 0.48rem;
+          line-height: (60 / 48);
+          word-break: break-all;
+          color: #fff;
+        }
+
+        .founder-post {
+          margin-top: 0.08rem;
+          font-size: 0.3rem;
+          font-weight: 500;
+          line-height: (50 / 30);
+          color: #fff;
+        }
+      }
+    }
+
+    .founder-introduction { margin-top: 0.4rem; }
+  }
+}
+
+// milestones
+.milestones {
+  .list li {
+    @include flex(flex, space-between, center);
+
+    & + li { margin-top: 0.32rem; }
+
+    .pic {
+      @include square(1.8rem);
+
+      img {
+        display: block;
+        @include square(100%);
+      }
+    }
+
+    .desc {
+      width: calc(100% - 2.36rem);
+
+      div {
+        margin-top: 0.12rem;
+        font-size: 0.3rem;
+        font-weight: 500;
+        line-height: (50 / 30);
+        color: #fff;
+      }
+    }
+  }
+}
+
+// culture
+.culture {
+  .list-container {
+    @include flex(flex, space-between, flex-start);
+
+    ul {
+      width: 48.4984%;
+
+      li {
+        position: relative;
+        background-color: #000;
+
+        & + li { margin-top: 6.1919%; }
+
+        .visuel-single {
+          height: 100%;
+          opacity: 0.7;
+        }
+
+        .content {
+          position: absolute;
+          bottom: 0.02rem;
+          right: 0.15rem;
+          left: 0.15rem;
+          font-size: 0.3rem;
+          font-weight: 500;
+          line-height: (50 / 30);
+          color: #fff;
+        }
+      }
+
+      &.left .visuel-single:before { padding-top: 95.9752%; }
+      &.right .visuel-single:before { padding-top: 61.9195%; }
+    }
+  }
+}
+
+// locations
+.locations {
+  .address {
+    li {
+      position: relative;
+      padding-left: 0.35rem;
+
+      & + li { margin-top: 0.4rem; }
+
+      &:before {
+        position: absolute;
+        top: 0.26rem;
+        left: 0;
+        margin-top: -0.15rem;
+        width: 0.22rem;
+        height: 0.29rem;
+        @include bg-img('icon-location.svg');
+        content: "";
+      }
+    }
+  }
+}

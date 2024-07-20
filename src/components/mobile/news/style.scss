@@ -1,0 +1,139 @@
+// news mobile
+
+// banner-container
+.banner-container {
+  @include banner-container-mobile;
+
+  .container {
+    @include flex(flex, flex-start, center);
+    position: absolute;
+    @include position-equal(0);
+
+    .title { @include slogan(); }
+  }
+}
+
+// top-news-container
+.top-news-container {
+  @include banner-container-mobile;
+
+  .container {
+    @include flex(flex, flex-start, center);
+    position: absolute;
+    @include position-equal(0);
+    border-bottom: 0 none;
+    padding-bottom: 0;
+
+    .content {
+      width: 5.54rem;
+      
+      & > * + * { margin-top: 0.24rem; }
+
+      .title {
+        max-height: 1.5rem;
+        font-size: 0.42rem;
+        font-weight: 600;
+        line-height: 0.5rem;
+        @include text-overflow(3);
+        color: #fff;
+
+        .andriod & { font-weight: 700; }
+
+        .text-area {
+          & > * { @include text-overflow(3); }
+
+          .text {
+            font-size: 1.68rem;
+            line-height: 2rem;
+          }
+        }
+      }
+  
+      .desc {
+        margin-top: 0.4rem;
+        max-height: 0.72rem;
+        font-size: 0.28rem;
+        line-height: 0.36rem;
+        @include text-overflow(2);
+        color: #d2d2d2;
+
+        .text-area {
+          & > * { @include text-overflow(2); }
+
+          .text {
+            font-size: 1.12rem;
+            line-height: 1.44rem;
+          }
+        }
+      }
+  
+      .info {
+        overflow: hidden;
+        font-size: 0.22rem;
+        line-height: 0.36rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #9f9f9f;
+
+        i {
+          display: inline;
+          padding-right: 0.18rem;
+          font-style: normal;
+        }
+      }
+
+      .view-more {
+        width: 1.66rem;
+        height: 0.58rem;
+
+        span { line-height: 0.58rem; }
+      }
+    }
+  }
+}
+
+// latest-news-container
+.latest-news-container {
+  .news-list {
+    margin-top: 0.4rem;
+
+    a {
+      @include flex(flex, space-between, flex-start);
+
+      & + a { margin-top: 0.4rem; }
+    }
+
+    .visuel-single {
+      width: 36.036%;
+
+      &:before { padding-top: 66.6666%; }
+    }
+
+    .details {
+      // width: calc(100% - 36.036% - 0.32rem);
+      width: 59%;
+      color: #fff;
+
+      .title {
+        max-height: 0.72rem;
+        font-size: 0.24rem;
+        line-height: 0.36rem;
+        @include text-overflow(2);
+
+        .text-area {
+          & > * { @include text-overflow(2); }
+
+          .text {
+            font-size: 0.96rem;
+            line-height: 1.44rem;
+          }
+        }
+      }
+
+      .info {
+        margin-top: 0.2rem;
+        @include news-info;
+      }
+    }
+  }
+}

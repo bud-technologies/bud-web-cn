@@ -1,0 +1,54 @@
+// news-details mobile
+
+.container {
+  border-bottom: 0.03rem solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.84rem;
+  padding-bottom: 0.88rem;
+}
+
+.news-title {
+  font-size: 0.42rem;
+  font-weight: 500;
+  line-height: (50 / 42);
+  color: #fff;
+
+  .text-area .text { font-size: 1.68rem; }
+}
+.andriod .news-title { font-weight: 700; }
+
+.info {
+  overflow: hidden;
+  margin-top: 0.4rem;
+  font-size: 0.22rem;
+  line-height: 0.36rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #9f9f9f;
+
+  i {
+    display: inline;
+    padding-right: 0.18rem;
+    font-style: normal;
+  }
+}
+
+.details {
+  margin-top: 0.4rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  font-size: 0.28rem;
+  line-height: (52 / 28);
+  color: #d2d2d2;
+
+  img {
+    border-radius: 0.12rem;
+    max-width: 100%;
+  }
+}
+
+.go-back {
+  margin: 0.88rem auto 0;
+  // @include size(1.54rem, 0.52rem);
+  width: 1.54rem;
+}

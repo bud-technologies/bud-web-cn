@@ -1,0 +1,107 @@
+// main-header mobile
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  background-color: rgba(3, 3, 3, 0);
+  @include transition(#{ background 0.15s ease-out });
+
+  & > .container {
+    @include flex(flex, space-between, center);
+    z-index: 50;
+    height: 1.28rem;
+    @include transition(#{ height 0.15s ease-out });
+
+    & > p {
+      position: relative;
+      z-index: 1;
+      font-size: 0.4rem;
+      font-weight: 600;
+      text-align: center;
+      opacity: 0;
+      @include transition(#{ opacity 0.2s ease-out });
+      pointer-events: none;
+
+      &.show { opacity: 1; }
+    }
+
+    .logo {
+      width: 0.52rem;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .menu {
+      position: relative;
+      @include square(0.64rem);
+      @include transform(#{ translateX(0.1rem) });
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        @include position-center;
+        border-radius: 0.08rem;
+        margin: -0.03rem 0 0 -0.22rem;
+        @include size(0.44rem, 0.06rem);
+        background-color: #fff;
+        @include transition(#{ transform 0.2s ease-out });
+
+        &:nth-child(1) { @include transform(#{ translateY(-0.16rem) }); }
+        &:nth-child(3) { @include transform(#{ translateY(0.16rem) }); }
+      }
+
+      &.open {
+        span:nth-child(1),
+        span:nth-child(2) { @include transform(#{ translateY(0) rotate(-45deg) }); }
+        span:nth-child(3) { @include transform(#{ translateY(0) rotate(45deg) }); }
+      }
+    }
+  }
+
+  &.sticky {
+    background-color: rgba(3, 3, 3, 1);
+
+    .container { height: 1.08rem; }
+  }
+}
+.andriod .header > .container > p { font-weight: 700; }
+
+.menu-container {
+  visibility: hidden;
+  position: fixed;
+  @include position-equal(0);
+  z-index: 1;
+  background-color: #000;
+
+  ul {
+    position: absolute;
+    @include position-center;
+    width: 100%;
+    @include translate-center;
+
+    li {
+      & + li { margin-top: 0.92rem; }
+
+      a {
+        display: block;
+        font-size: 0.4rem;
+        font-weight: 500;
+        line-height: 0.56rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        @include transition(#{ color 0.15s ease-out });
+
+        .andriod & { font-weight: 700; }
+
+        &:hover { color: rgba(255, 255, 255, 1); }
+      }
+      &.active a { color: rgba(255, 255, 255, 1); }
+    }
+  }
+}

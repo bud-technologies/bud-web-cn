@@ -1,0 +1,183 @@
+// home mobile
+
+.main-container > section {
+  .block-subtitle + .inner { @include block-subtitle-margin; }
+
+  .inner + .visuel-single { margin-top: 0.4rem; }
+}
+
+// banner-container
+.banner-container {
+  @include banner-container-mobile;
+
+  .banner-inner {
+    position: absolute;
+    @include position-center();
+    z-index: 10;
+    min-width: 80%;
+    width: 6.66rem;
+    text-align: center;
+    @include translate-center();
+
+    & > * + * { margin-top: 0.4rem; }
+
+    .slogan { @include slogan(); }
+
+    .content { color: #fff; }
+  }
+
+  .banner-footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 15%;
+    z-index: 10;
+    text-align: center;
+    @include transform(#{ translateY(-50%) });
+
+    .container > * + * { margin-top: 0.4rem; }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem; // 按钮之间的间距
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      padding: 0.08rem 0.2rem;
+      font-size: 0.25rem;
+      font-weight: 400;
+      color: #fff;
+      background-color: #101A1C;
+      border: none;
+      border-radius: 0.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      .icon {
+        margin-right: 0.05rem; // 图标和文字之间的间距
+        width: 0.5rem; // 根据需要调整图标大小
+        height: auto;
+      }
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+    
+
+    @media screen and (max-width: $screen-xl-max) {
+      .container > * + * { margin-top: responsive(28); }
+
+      .content {
+        font-size: responsive(16);
+        line-height: (26 / 16);
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+// bud-club
+.bud-club {
+  .visuels-list {
+    margin-top: 0.4rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: -0.3rem;
+      padding: 0 0.09rem;
+      // width: 6.3rem;
+    }
+
+    li {
+      margin-top: 0.3rem;
+      width: calc(50% - 0.15rem);
+
+      &:before { padding-top: 66.6666%; }
+    }
+  }
+}
+
+// team
+.team {
+  .team-logos {
+    @include flex(flex, space-between, flex-start);
+    margin-top: 0.4rem;
+
+    img { height: 0.44rem; }
+  }
+
+  .visuel-single {
+    margin-top: 0.5rem;
+
+    &:before { padding-top: 57.6612%; }
+  }
+}
+
+// investors
+.investors {
+  .visuel-single:before { padding-top: 57.6612%; }
+
+  .investor-logos {
+    @include flex(flex, space-between, flex-start);
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+
+    img { width: 47.1471%; }
+  }
+}
+
+// news
+.news {
+  .news-list {
+    margin-top: 0.5rem;
+
+    a {
+      @include flex(flex, space-between, flex-start);
+
+      & + a { margin-top: 0.4rem; }
+    }
+
+    .visuel-single {
+      width: 38.036%;
+
+      &:before { padding-top: 66.6666%; }
+    }
+
+    .details {
+      width: calc(100% - 38.036% - 0.32rem);
+      color: #fff;
+
+      .title {
+        max-height: 0.72rem;
+        font-size: 0.24rem;
+        line-height: 0.36rem;
+        @include text-overflow(2);
+
+        .text-area {
+          .placeholder { @include text-overflow(2); }
+
+          .text {
+            font-size: 0.96rem;
+            line-height: 1.44rem;
+            @include text-overflow(2);
+          }
+        }
+      }
+
+      .info {
+        margin-top: 0.2rem;
+        @include news-info;
+      }
+    }
+  }
+  
+  .view-more { margin: 0.4rem auto 0; }
+}

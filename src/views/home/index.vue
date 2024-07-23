@@ -33,9 +33,9 @@ export default {
       banner: {
         videoUrl: `https://cdn.joinbudapp.com/bud-website-us-video/banner.mp4?${window.version}`,
         videoPoster: `https://cdn.joinbudapp.com/bud-website-us-video/banner.jpg?${window.version}`,
-        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel.jpg?${window.version}`,
+        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel-2.png?${window.version}`,
         slogan: "在BUD碧优蒂的世界创作属于你的作品",
-        sloganMobile: "在BUD碧优蒂的世界<br>创造属于你的世界",
+        sloganMobile: "在BUD碧优蒂的世界<br>创作属于你的作品",
         contentPc:
           "3D形象和互动内容UGC游戏平台<br>带给每一个人创造和分享3D内容的全新体验",
         contentMobile:

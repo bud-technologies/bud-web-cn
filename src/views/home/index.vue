@@ -43,11 +43,11 @@ export default {
         downloadUrlEn: "https://linktr.ee/BUDcreate",
         downloadUrlCn:
           "https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.pointone.buddy&info=1292423CB71192DE5C6A83244B2C6198",
-        androidText: " Android预约 ",
-        androidLink: "https://tap.cn/l26I1nsy3",
-        iosText: "App Store预约",
-        iosLink:
-          "https://apps.apple.com/cn/app/bud-%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C/id6450975322?l=en-GB",
+        androidText: "安卓官服公测",
+        androidLink:
+          "https://bud-package.budapp.cn/android/1.0.0/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
+        iosText: " iOS官服公测 ",
+        iosLink: "https://testflight.apple.com/join/8hOJdgU7",
       },
       budClub: {
         title: "真正的3D形象和互动内容UGC游戏平台",
@@ -77,7 +77,7 @@ export default {
       investors: {
         title: "投资机构",
         content:
-          "公司已获得红杉印度、GGV纪源资本、ClearVue锴明投资、网易、北极光创投、启明创投、源码资本和云九资本等主流投资机构的多轮融资支持。",
+          "公司已获得红杉印度、GGV纪源资本、ClearVue锴明投资、网易、北极光创投、启明创投、源码资本以及云九资本等主流投资机构的多轮融资支持。",
         contentMobile:
           "公司已获得红杉印度、GGV纪源资本、ClearVue锴明投资、网易、北极光创投、启明创投、源码资本以及云九资本等主流投资机构的多轮融资支持。",
         visuel: `${process.env.BASE_URL}/static/img/home/investor-visuel.jpg?${window.version}`,

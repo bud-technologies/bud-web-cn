@@ -61,7 +61,6 @@ export default {
         //   `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/pointone.tech"  target="_blank"> 粤ICP备19124963号-1  </a>出版许可证号：网出证（粤）字第005号 <br> 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
         //   "客服邮箱：contact@pointone.tech<br> 商务合作：bd@pointone.tech <br>" +
         //   "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
-
         userAgreement: "用户协议",
         userAgreementLink: "https://buddy.budapp.cn/policy/permission.html",
         privacyPolicy: "隐私政策",

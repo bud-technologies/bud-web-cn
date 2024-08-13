@@ -12,16 +12,18 @@
       <div class="banner-footer">
         <div class="container blocks-in-view">
           <div class="button-group">
-            <a :href="banner.androidLink" download="BUD碧优蒂的世界">
-              <div class="btn">
-                <img
-                  class="icon"
-                  src="@/assets/img/android.svg"
-                  alt="android icon"
-                />
-                <div class="text" v-html="banner.androidText"></div>
-              </div>
-            </a>
+            <div class="btn" @click="handleClick(banner.androidLink)">
+              <img
+                class="icon"
+                src="@/assets/img/android.svg"
+                alt="android icon"
+              />
+              <div
+                class="text"
+                style="margin-right: 5px"
+                v-html="banner.androidText"
+              ></div>
+            </div>
             <div class="btn" @click="handleClick(banner.iosLink)">
               <img class="icon" src="@/assets/img/ios.svg" alt="android icon" />
               <div
@@ -29,6 +31,14 @@
                 style="margin-right: 5px"
                 v-html="banner.iosText"
               ></div>
+            </div>
+            <div class="btn" @click="handleClick(banner.taptapLink)">
+              <img
+                class="icon taptap"
+                src="@/assets/img/taptap.png"
+                alt="icon"
+              />
+              <div class="text" v-html="banner.taptapText"></div>
             </div>
           </div>
         </div>

@@ -47,7 +47,10 @@ export default {
         androidLink:
           "https://bud-package.budapp.cn/android/1.0.0/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
         iosText: " iOS官服公测 ",
-        iosLink: "https://testflight.apple.com/join/8hOJdgU7",
+        iosLink:
+          "https://apps.apple.com/cn/app/bud-%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C/id6450975322?l=en-GB",
+        taptapText: " 官服公测 ",
+        taptapLink: "https://l.taptap.cn/AsVbby8e?channel=rep-rep_yx3erlajttk",
       },
       budClub: {
         title: "真正的3D形象和互动内容UGC游戏平台",

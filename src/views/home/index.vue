@@ -31,25 +31,25 @@ export default {
     return {
       showMain: false,
       banner: {
-        videoUrl: `https://cdn.joinbudapp.com/bud-website-us-video/banner.mp4?${window.version}`,
-        videoPoster: `https://cdn.joinbudapp.com/bud-website-us-video/banner.jpg?${window.version}`,
-        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel-2.png?${window.version}`,
-        slogan: "在BUD碧优蒂的世界创作属于你的作品",
-        sloganMobile: "在BUD碧优蒂的世界<br>创作属于你的作品",
+        // videoUrl: `https://cdn.joinbudapp.com/bud-website-us-video/banner.mp4?${window.version}`,
+        videoPoster: `${process.env.BASE_URL}/static/img/home/banner-s2.png?${window.version}`,
+        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel-s2.png?${window.version}`,
+        slogan: "BUD碧优蒂的世界<br>S2赛季夏浪音乐节",
+        sloganMobile: "BUD碧优蒂的世界<br>S2赛季夏浪音乐节",
         contentPc:
-          "3D形象和互动内容UGC游戏平台<br>带给每一个人创造和分享3D内容的全新体验",
+          "8月26日“夏浪音乐节”新赛季激情开启，狂热之夏，音浪来袭，放肆狂欢！",
         contentMobile:
-          "3D形象和互动内容UGC游戏平台<br>带给每一个人创造和分享3D内容的全新体验",
+          "8月26日“夏浪音乐节”新赛季激情开启<br>狂热之夏，音浪来袭，放肆狂欢！",
         downloadUrlEn: "https://linktr.ee/BUDcreate",
         downloadUrlCn:
           "https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.pointone.buddy&info=1292423CB71192DE5C6A83244B2C6198",
-        androidText: "安卓官服公测",
+        androidText: "安卓S2赛季下载",
         androidLink:
-          "https://bud-package.budapp.cn/android/1.0.0/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
-        iosText: " iOS官服公测 ",
+          "https://bud-package-1318932159.cos.ap-beijing.myqcloud.com/android/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
+        iosText: "苹果S2赛季下载",
         iosLink:
           "https://apps.apple.com/cn/app/bud-%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C/id6450975322?l=en-GB",
-        taptapText: " 官服公测 ",
+        taptapText: "S2赛季下载",
         taptapLink: "https://l.taptap.cn/AsVbby8e?channel=rep-rep_yx3erlajttk",
       },
       budClub: {

@@ -32,7 +32,11 @@
               <div class="text" v-html="banner.iosText"></div>
             </div>
             <div class="btn" @click="handleClick(banner.taptapLink)">
-              <img class="icon" src="@/assets/img/taptap.png" alt="icon" />
+              <img
+                class="taptapIcon"
+                src="@/assets/img/taptap.png"
+                alt="icon"
+              />
               <div class="text" v-html="banner.taptapText"></div>
             </div>
           </div>

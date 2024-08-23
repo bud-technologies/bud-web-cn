@@ -34,7 +34,7 @@
             </div>
             <div class="btn" @click="handleClick(banner.taptapLink)">
               <img
-                class="icon taptap"
+                class="taptapIcon"
                 src="@/assets/img/taptap.png"
                 alt="icon"
               />

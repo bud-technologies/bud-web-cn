@@ -45,7 +45,7 @@ export default {
           "https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.pointone.buddy&info=1292423CB71192DE5C6A83244B2C6198",
         androidText: "安卓S2赛季下载",
         androidLink:
-          "https://bud-package-1318932159.cos.ap-beijing.myqcloud.com/android/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
+          "https://bud-package.budapp.cn/android/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
         iosText: "苹果S2赛季下载",
         iosLink:
           "https://apps.apple.com/cn/app/bud-%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C/id6450975322?l=en-GB",

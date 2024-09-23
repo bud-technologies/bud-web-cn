@@ -38,30 +38,30 @@ export default {
       ],
       footerData: {
         // //粤ICP备19124963号-2   ->  https://www.budapp.cn
-        text:
-          "本公司游戏产品适合8岁（含）以上玩家娱乐<br>" +
-          "抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活<br>" +
-          `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/budapp.cn"  target="_blank"> 粤ICP备19124963号-2 </a>出版许可证号：网出证（粤）字第005号 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
-          "客服邮箱：contact@pointone.tech 商务合作：bd@pointone.tech <br>" +
-          "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
-        textMobile:
-          "本公司游戏产品适合8岁（含）以上玩家娱乐<br>" +
-          `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/budapp.cn"  target="_blank"> 粤ICP备19124963号-2 </a>出版许可证号：网出证（粤）字第005号 <br> 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
-          "客服邮箱：contact@pointone.tech<br> 商务合作：bd@pointone.tech <br>" +
-          "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
-
-        // //粤ICP备19124963号-1    ->  https://www.pointone.tech/
         // text:
         //   "本公司游戏产品适合8岁（含）以上玩家娱乐<br>" +
         //   "抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活<br>" +
-        //   `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/pointone.tech"  target="_blank"> 粤ICP备19124963号-1  </a>出版许可证号：网出证（粤）字第005号 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
+        //   `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/budapp.cn"  target="_blank"> 粤ICP备19124963号-2 </a>出版许可证号：网出证（粤）字第005号 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
         //   "客服邮箱：contact@pointone.tech 商务合作：bd@pointone.tech <br>" +
         //   "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
         // textMobile:
         //   "本公司游戏产品适合8岁（含）以上玩家娱乐<br>" +
-        //   `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/pointone.tech"  target="_blank"> 粤ICP备19124963号-1  </a>出版许可证号：网出证（粤）字第005号 <br> 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
+        //   `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/budapp.cn"  target="_blank"> 粤ICP备19124963号-2 </a>出版许可证号：网出证（粤）字第005号 <br> 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
         //   "客服邮箱：contact@pointone.tech<br> 商务合作：bd@pointone.tech <br>" +
         //   "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
+
+        // //粤ICP备19124963号-1    ->  https://www.pointone.tech/
+        text:
+          "本公司游戏产品适合8岁（含）以上玩家娱乐<br>" +
+          "抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活<br>" +
+          `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/pointone.tech"  target="_blank"> 粤ICP备19124963号-1  </a>出版许可证号：网出证（粤）字第005号 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
+          "客服邮箱：contact@pointone.tech 商务合作：bd@pointone.tech <br>" +
+          "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
+        textMobile:
+          "本公司游戏产品适合8岁（含）以上玩家娱乐<br>" +
+          `<a style="color: rgba(0, 0, 0, 0.45)" href="https://www.beianx.cn/search/pointone.tech"  target="_blank"> 粤ICP备19124963号-1  </a>出版许可证号：网出证（粤）字第005号 <br> 出版物号：ISBN 978-7-498-13394-6 <br> 审批文号：国新出审〔2024〕796号 著作权人：深圳零点一娱乐科技有限公司 出版单位：广东海燕电子音像出版社有限公司<br>  ` +
+          "客服邮箱：contact@pointone.tech<br> 商务合作：bd@pointone.tech <br>" +
+          "公司地址：深圳市南山区粤海街道高新区社区高新南十道16号金地威新中心A座1607",
 
         userAgreement: "用户协议",
         userAgreementLink: "https://buddy.budapp.cn/policy/permission.html",

@@ -19,13 +19,14 @@
       <div class="banner-footer">
         <div class="container blocks-in-view">
           <div class="button-group">
-            <div class="btn" @click="handleClick(banner.androidLink)">
+            <div class="btn" @click="handleDownloadAndroid">
               <img
                 class="icon"
                 src="@/assets/img/android.png"
                 alt="android icon"
               />
               <div class="text" v-html="banner.androidText"></div>
+              <iframe id="downloadFrame" style="display: none"></iframe>
             </div>
             <div class="btn" @click="handleClick(banner.iosLink)">
               <img class="icon" src="@/assets/img/ios.png" alt="android icon" />
@@ -205,7 +206,6 @@ import { inView } from "@/common/js/in-view";
 import { textResponsive } from "@/common/js/text-responsive";
 import { throttle } from "@/util/util";
 import { getData } from "@/api/index";
-
 export default {
   name: "home-pc",
 
@@ -305,6 +305,11 @@ export default {
         return;
       }
       window.open(item, "_blank");
+    },
+    //下载安卓包
+    handleDownloadAndroid() {
+      location.href =
+        "https://bud-bag.budapp.cn/android/1726637636/BUD%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D.apk";
     },
   },
 };

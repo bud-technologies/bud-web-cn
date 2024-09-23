@@ -32,24 +32,21 @@ export default {
       showMain: false,
       banner: {
         // videoUrl: `https://cdn.joinbudapp.com/bud-website-us-video/banner.mp4?${window.version}`,
-        videoPoster: `${process.env.BASE_URL}/static/img/home/banner-s2.png?${window.version}`,
-        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel-s2.png?${window.version}`,
-        slogan: "BUD碧优蒂的世界<br>S2赛季夏浪音乐节",
-        sloganMobile: "BUD碧优蒂的世界<br>S2赛季夏浪音乐节",
-        contentPc:
-          "8月26日“夏浪音乐节”新赛季激情开启，狂热之夏，音浪来袭，放肆狂欢！",
+        videoPoster: `${process.env.BASE_URL}/static/img/home/banner-s3.png?${window.version}`,
+        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel-s3.png?${window.version}`,
+        slogan: "BUD碧优蒂的世界<br>S3萌宠郊游赛季",
+        sloganMobile: "BUD碧优蒂的世界<br>S3萌宠郊游赛季",
+        contentPc: "9月23日“萌宠郊游”新赛季开启，自定义属于你的独特萌宠！",
         contentMobile:
-          "8月26日“夏浪音乐节”新赛季激情开启<br>狂热之夏，音浪来袭，放肆狂欢！",
+          "9月23日“萌宠郊游”新赛季开启<br>自定义属于你的独特萌宠！",
         downloadUrlEn: "https://linktr.ee/BUDcreate",
         downloadUrlCn:
           "https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.pointone.buddy&info=1292423CB71192DE5C6A83244B2C6198",
-        androidText: "安卓S2赛季下载",
-        androidLink:
-          "https://bud-package.budapp.cn/android/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk",
-        iosText: "苹果S2赛季下载",
+        androidText: "安卓S3赛季下载",
+        iosText: "苹果S3赛季下载",
         iosLink:
           "https://apps.apple.com/cn/app/bud-%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C/id6450975322?l=en-GB",
-        taptapText: "S2赛季下载",
+        taptapText: "S3赛季下载",
         taptapLink: "https://l.taptap.cn/AsVbby8e?channel=rep-rep_yx3erlajttk",
       },
       budClub: {

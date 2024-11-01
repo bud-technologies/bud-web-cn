@@ -1,6 +1,9 @@
 # web
 
 ## node建议版本：14.18.3
+```
+nvm use 14.18.3
+```
 
 ## Project setup
 ```

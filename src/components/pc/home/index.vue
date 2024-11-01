@@ -306,10 +306,10 @@ export default {
       }
       window.open(item, "_blank");
     },
-    //下载安卓包
+    //todo:update下载安卓包
     handleDownloadAndroid() {
       location.href =
-        "https://bud-bag.budapp.cn/android/1726637636/BUD%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D.apk";
+        "https://bud-bag.budapp.cn/android/1730345646/%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C-%E5%AE%98%E6%9C%8D%E5%8C%85.apk";
     },
   },
 };

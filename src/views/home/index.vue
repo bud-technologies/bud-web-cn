@@ -27,26 +27,26 @@ export default {
     homeMobile: () => import("@/components/mobile/home"),
   },
 
+  //todo:update
   data() {
     return {
       showMain: false,
       banner: {
         // videoUrl: `https://cdn.joinbudapp.com/bud-website-us-video/banner.mp4?${window.version}`,
-        videoPoster: `${process.env.BASE_URL}/static/img/home/banner-s3.png?${window.version}`,
-        visuelMobile: `${process.env.BASE_URL}/static/img/home/banner-visuel-s3.png?${window.version}`,
-        slogan: "BUD碧优蒂的世界<br>S3萌宠郊游赛季",
-        sloganMobile: "BUD碧优蒂的世界<br>S3萌宠郊游赛季",
-        contentPc: "9月23日“萌宠郊游”新赛季开启，自定义属于你的独特萌宠！",
-        contentMobile:
-          "9月23日“萌宠郊游”新赛季开启<br>自定义属于你的独特萌宠！",
+        videoPoster: `${process.env.BASE_URL}/static/img/home/s4-bg.jpeg?${window.version}`,
+        visuelMobile: `${process.env.BASE_URL}/static/img/home/s4-mobile.jpeg?${window.version}`,
+        slogan: `BUD碧优蒂的世界<br>S4木偶奇遇季`,
+        sloganMobile: `BUD碧优蒂的世界<br>S4木偶奇遇季`,
+        contentPc: `11月4日“木偶奇遇季”新赛季全新启程！沉浸动画世界，感受木偶魅力，开启奇幻之旅！`,
+        contentMobile: `11月4日“木偶奇遇季”新赛季全新启程！<br>沉浸动画世界，感受木偶魅力，开启奇幻之旅！`,
         downloadUrlEn: "https://linktr.ee/BUDcreate",
         downloadUrlCn:
           "https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.pointone.buddy&info=1292423CB71192DE5C6A83244B2C6198",
-        androidText: "安卓S3赛季下载",
-        iosText: "苹果S3赛季下载",
+        androidText: `安卓S4赛季下载`,
+        iosText: `苹果S4赛季下载`,
         iosLink:
           "https://apps.apple.com/cn/app/bud-%E7%A2%A7%E4%BC%98%E8%92%82%E7%9A%84%E4%B8%96%E7%95%8C/id6450975322?l=en-GB",
-        taptapText: "S3赛季下载",
+        taptapText: `S4赛季下载`,
         taptapLink: "https://l.taptap.cn/AsVbby8e?channel=rep-rep_yx3erlajttk",
       },
       budClub: {
